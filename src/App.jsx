@@ -1,38 +1,9 @@
+import Header from "./components/Header";
+
 function App() {
   return (
     <div className="App">
-      <header className="header">
-        <div className="container">
-          <a href="#" className="header-logo">
-            LOGO HERE
-          </a>
-          <ul className="header-navigation">
-            <li className="header-navigation-item">
-              <a href="#" className="header-navigation-link">
-                Home
-              </a>
-            </li>
-            <li className="header-navigation-item">
-              <a href="#" className="header-navigation-link">
-                Service
-              </a>
-            </li>
-            <li className="header-navigation-item">
-              <a href="#" className="header-navigation-link">
-                Our Project
-              </a>
-            </li>
-            <li className="header-navigation-item">
-              <a href="#" className="header-navigation-link">
-                About us
-              </a>
-            </li>
-          </ul>
-          <a href="#" className="button-contact button-secondary">
-            Contact us
-          </a>
-        </div>
-      </header>
+      <Header />
       <main className="main-content">
         <section className="section-banner">
           <div className="container">
