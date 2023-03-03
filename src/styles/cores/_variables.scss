@@ -1,6 +1,7 @@
 // global color
 $color-text: #000;
 $color-bg: #19191b;
+$color-slate-blue: #5454d4;
 // time transition
 $time: 0.4s;
 
@@ -27,4 +28,7 @@ $xxl-max: (1400px - 0.2px);
 
 /*BOXED LAYOUT*/
 $max-width: 1440px;
-$container-width: 1200px;
+$container-width: 1230px;
+
+// Z-INDEX
+$z-header: 100;

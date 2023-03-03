@@ -3,3 +3,17 @@
 @import "variables";
 @import "mixins";
 @import "layout";
+
+body {
+  font-size: 1.4rem;
+  @include tablet {
+    font-size: 1.6rem;
+  }
+}
+
+@include mobile {
+  .container {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
