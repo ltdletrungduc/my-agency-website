@@ -1,0 +1,30 @@
+// global color
+$color-text: #000;
+$color-bg: #19191b;
+// time transition
+$time: 0.4s;
+
+/*font families*/
+$font-nunito: "Nunito Sans", sans-serif;
+$font-graphik: "Graphik", sans-serif;
+
+/*headings typo*/
+$fz: 16px;
+$lh: 1.5;
+
+/*GRID - media queries breakpoints*/
+$sm-min: 576px;
+$md-min: 768px;
+$lg-min: 992px;
+$xl-min: 1200px;
+$xxl-min: 1400px;
+
+$sm-max: (576px - 0.2px);
+$md-max: (768px - 0.2px);
+$lg-max: (992px - 0.2px);
+$xl-max: (1200px - 0.2px);
+$xxl-max: (1400px - 0.2px);
+
+/*BOXED LAYOUT*/
+$max-width: 1440px;
+$container-width: 1200px;
