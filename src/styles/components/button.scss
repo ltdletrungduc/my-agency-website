@@ -1,0 +1,26 @@
+.button-primary,
+.button-secondary {
+  color: #fff;
+  border-radius: 4px;
+  transition: $time ease;
+  span {
+    display: block;
+    width: 100%;
+  }
+}
+
+.button-secondary {
+  border: solid 1px #fff;
+  &:hover {
+    border-color: $color-slate-blue;
+    background-color: $color-slate-blue;
+  }
+}
+
+.button-primary {
+  border: solid 1px $color-slate-blue;
+  &:hover {
+    border-color: #fff;
+    background-color: rgba($color: #fff, $alpha: 0);
+  }
+}

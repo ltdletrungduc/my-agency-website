@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 import logo from "@/assets/images/logo.png";
 import logo_mobile from "@/assets/images/logo_mobile.png";
@@ -24,13 +24,25 @@ const navLinks = [
 
 function Header() {
   const [ showNav, setShowNav ] = useState( false );
-
+  const headerRef = useRef( null );
+  useEffect( () => {
+    let headerSticky = function () {
+      let distance = ( window.innerWidth < 768 ) ? 150 : 250;
+      if ( window.scrollY > distance ) {
+        headerRef.current.classList.add( "is-sticky" );
+      } else {
+        headerRef.current.classList.remove( "is-sticky" );
+      }
+    }
+    window.addEventListener( 'scroll', headerSticky );
+    return () => window.removeEventListener( 'scroll', headerSticky );
+  }, [] );
   return (
-    <header className="header">
+    <header className="header" ref={headerRef}>
       <div className="container">
         <a href="#" className="header-logo">
           <picture>
-            <source media="(min-width:768px)" srcset={logo} width="132" height="40" />
+            <source media="(min-width:768px)" srcSet={logo} width="132" height="40" />
             <img src={logo_mobile} alt="Enver Digital Agency" width="115" height="34" />
           </picture>
         </a>
@@ -41,9 +53,7 @@ function Header() {
             </li>
           ) )}
         </ul>
-        <a href="#" className="button-contact button-secondary">
-          Contact us
-        </a>
+        <a href="#" className="button-contact button-secondary"><span>Contact us</span></a>
         <div className={`button-menu ${ showNav ? 'is-active' : '' }`} onClick={() => { setShowNav( !showNav ) }}>
           <span></span><span></span><span></span>
         </div>
